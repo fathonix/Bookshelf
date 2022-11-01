@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <title>Bookshelf</title>
+</head>
+
+<body>
+  <header id="header-mini">
+    <h1>Bookshelf</h1>
+    <p>Keep on track of your books!</p>
+  </header>
+  <main>
+    <div class="section" id="ongoing">
+      <h2>Ongoing books</h2>
+      <div class="item-container">
+        <img class="button add" alt="Add a book" onclick="showPopup(this)" />
+      </div>
+    </div>
+    <div class="section" id="completed">
+      <h2>Completed books</h2>
+      <div class="item-container">
+        <img class="button add" alt="Add a book" onclick="showPopup(this)" />
+      </div>
+    </div>
+  </main>
+  <footer>
+    Made by <a href="http://github.com/fathonix" target="_blank">fathonix</a>
+  </footer>
+  <div id="overlay">
+    <img class="button popup-close" alt="Cancel" onclick="closePopup()" />
+    <div id="popup">
+      <h1 id="popup-title"></h1>
+      <form id="form-book">
+        <input type="text" id="title" placeholder="Book Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="page" placeholder="Page" required />
+        <div id="book-submit" class="button" type="submit" onclick="submitBook()">Submit</div>
+      </form>
+    </div>
+  </div>
+  <script src="./assets/js/index.js" defer></script>
+  <script src="./assets/js/storage.js" defer></script>
+</body>
+
+</html>

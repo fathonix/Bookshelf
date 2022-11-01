@@ -1,0 +1,263 @@
+html,
+body,
+input {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  background-color: rgb(230, 230, 230);
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+a {
+  color: white;
+}
+
+input {
+  background-color: rgb(245, 245, 245);
+}
+
+button {
+  border-style: hidden;
+}
+
+#header-mini {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/header.jpg");
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: 500ms;
+}
+
+#header-mini > h1,
+#header-mini > p {
+  color: white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  overflow: scroll;
+}
+
+.section {
+  max-width: 780px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+  background: rgb(245, 245, 245);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.section > h2 {
+  text-align: center;
+}
+
+.item-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.item-container > .button {
+  max-height: 2em;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 1em;
+  height: fit-content;
+}
+
+.desc {
+  overflow: clip;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 0 1em 1em;
+  gap: 1em;
+}
+
+.actions > .edit {
+  content: url(../img/edit.svg);
+}
+
+.actions > .edit:hover {
+  content: url(../img/edit-fill.svg);
+}
+
+.actions > .remove {
+  content: url(../img/trash.svg);
+}
+
+.actions > .remove:hover {
+  content: url(../img/trash-fill.svg);
+}
+
+#ongoing .actions > .move {
+  content: url(../img/circle-chevron-down.svg);
+}
+
+#ongoing .actions > .move:hover {
+  content: url(../img/circle-chevron-down-fill.svg);
+}
+
+#completed .actions > .move {
+  content: url(../img/circle-chevron-up.svg);
+}
+
+#completed .actions > .move:hover {
+  content: url(../img/circle-chevron-up-fill.svg);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(177, 177, 177);
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+  max-height: 5em;
+  transition: 500ms;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
+.add {
+  content: url(../img/add.svg);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  gap: 0.3em;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #232322;
+  transition: 500ms;
+}
+
+.popup-close {
+  background-color: rgb(255, 110, 110);
+  content: url(../img/close.svg);
+  position: absolute;
+  top: 5%;
+}
+
+.popup-close:hover {
+  background-color: rgb(255, 160, 160);
+}
+
+#popup {
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 1em;
+  background: white;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  padding: 1em;
+  transition: 500ms;
+}
+
+#popup > h1 {
+  text-align: center;
+}
+
+#popup > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#popup > form > input {
+  height: 3em;
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-color: rgb(123, 123, 123);
+  border-style: solid;
+  font-size: 1.1em;
+}
+
+@media (max-width: 500px) {
+  .item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    align-items: stretch;
+    justify-content: space-evenly;
+  }
+
+  .actions > .action {
+    height: 2em;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+}
